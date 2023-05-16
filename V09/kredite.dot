@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="laufkont <= 3.5\ngini = 0.408\nsamples = 700\nvalue = [200, 500]\nclass = gut", fillcolor="#88c4ef"] ;
+1 [label="laufzeit <= 43.5\ngini = 0.479\nsamples = 428\nvalue = [170, 258]\nclass = gut", fillcolor="#bbdef6"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="moral <= 3.5\ngini = 0.464\nsamples = 388\nvalue = [142, 246]\nclass = gut", fillcolor="#abd6f4"] ;
+1 -> 2 ;
+3 [label="gini = 0.486\nsamples = 283\nvalue = [118, 165]\nclass = gut", fillcolor="#c7e3f8"] ;
+2 -> 3 ;
+4 [label="gini = 0.353\nsamples = 105\nvalue = [24, 81]\nclass = gut", fillcolor="#74baed"] ;
+2 -> 4 ;
+5 [label="sparkont <= 4.5\ngini = 0.42\nsamples = 40\nvalue = [28, 12]\nclass = schlecht", fillcolor="#f0b78e"] ;
+1 -> 5 ;
+6 [label="gini = 0.257\nsamples = 33\nvalue = [28, 5]\nclass = schlecht", fillcolor="#ea985c"] ;
+5 -> 6 ;
+7 [label="gini = 0.0\nsamples = 7\nvalue = [0, 7]\nclass = gut", fillcolor="#399de5"] ;
+5 -> 7 ;
+8 [label="hoehe <= 10924.5\ngini = 0.196\nsamples = 272\nvalue = [30, 242]\nclass = gut", fillcolor="#52a9e8"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="weitkred <= 2.5\ngini = 0.182\nsamples = 267\nvalue = [27, 240]\nclass = gut", fillcolor="#4fa8e8"] ;
+8 -> 9 ;
+10 [label="gini = 0.363\nsamples = 42\nvalue = [10, 32]\nclass = gut", fillcolor="#77bced"] ;
+9 -> 10 ;
+11 [label="gini = 0.14\nsamples = 225\nvalue = [17, 208]\nclass = gut", fillcolor="#49a5e7"] ;
+9 -> 11 ;
+12 [label="sparkont <= 2.5\ngini = 0.48\nsamples = 5\nvalue = [3, 2]\nclass = schlecht", fillcolor="#f6d5bd"] ;
+8 -> 12 ;
+13 [label="gini = 0.0\nsamples = 2\nvalue = [2, 0]\nclass = schlecht", fillcolor="#e58139"] ;
+12 -> 13 ;
+14 [label="gini = 0.444\nsamples = 3\nvalue = [1, 2]\nclass = gut", fillcolor="#9ccef2"] ;
+12 -> 14 ;
+}

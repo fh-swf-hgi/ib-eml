@@ -1,0 +1,25 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="Temperatur <= 4.6\ngini = 0.75\nsamples = 12\nvalue = [3, 3, 3, 3]\nclass = Winter", fillcolor="#ffffff"] ;
+1 [label="gini = 0.0\nsamples = 3\nvalue = [3, 0, 0, 0]\nclass = Winter", fillcolor="#e58139"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Temperatur <= 16.9\ngini = 0.667\nsamples = 9\nvalue = [0, 3, 3, 3]\nclass = Frühling", fillcolor="#ffffff"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="Niederschlag <= 32.5\ngini = 0.5\nsamples = 6\nvalue = [0, 3, 0, 3]\nclass = Frühling", fillcolor="#ffffff"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 2\nvalue = [0, 0, 0, 2]\nclass = Herbst", fillcolor="#d739e5"] ;
+3 -> 4 ;
+5 [label="Niederschlag <= 47.5\ngini = 0.375\nsamples = 4\nvalue = [0, 3, 0, 1]\nclass = Frühling", fillcolor="#84ee7b"] ;
+3 -> 5 ;
+6 [label="Niederschlag <= 40.0\ngini = 0.5\nsamples = 2\nvalue = [0, 1, 0, 1]\nclass = Frühling", fillcolor="#ffffff"] ;
+5 -> 6 ;
+7 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1, 0, 0]\nclass = Frühling", fillcolor="#47e539"] ;
+6 -> 7 ;
+8 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 0, 1]\nclass = Herbst", fillcolor="#d739e5"] ;
+6 -> 8 ;
+9 [label="gini = 0.0\nsamples = 2\nvalue = [0, 2, 0, 0]\nclass = Frühling", fillcolor="#47e539"] ;
+5 -> 9 ;
+10 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 3, 0]\nclass = Sommer", fillcolor="#399de5"] ;
+2 -> 10 ;
+}
